@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>dialogue.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	
+	<script type="text/javascript">
+		
+		// alert
+		window.alert("hello world");
+		
+		// confirm
+		// 点击"确定"，返回true
+		if(confirm("是否确认删除?")){
+			// ... 做删除
+			alert("删除成功");
+		} else {
+			alert("取消删除");
+		}
+		
+		// prompt 输入对话框
+		// 返回输入的内容
+		var name = prompt("你的姓名?","请输入你的姓名");
+		alert(name);
+		
+		// -----------------------------------
+		// 向控制台输出信息
+		console.log("hello world");
+	
+	</script>
+	
+  </head>
+  
+  <body>
+  
+  </body>
+  
+  <script type="text/javascript">
+  		// 向页面输出信息
+		window.document.writeln("hello world");
+		document.writeln("<br>");
+		document.write("hello&nbsp;&nbsp;&nbsp;world2");
+		document.write("hello world3");
+  </script>
+ 
+</html>

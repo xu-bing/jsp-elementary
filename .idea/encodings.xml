@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/J6-javabean/src/main/java/com/service/DeptService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/J6-javabean/src/main/java/com/service/EmpService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/J6-javabean/src/main/java/com/util/DBConfig.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/J6-javabean/src/main/java/com/util/DBManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j10-real-captcha-form_verification/readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j10-real-captcha-form_verification/src/main/java/com/service/EmpService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j10-real-captcha-form_verification/src/main/java/com/servlet/CaptchaServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j10-real-captcha-form_verification/src/main/java/com/servlet/EmpServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j10-real-captcha-form_verification/src/main/java/com/servlet/RegisterServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j10-real-captcha-form_verification/src/main/java/com/servlet/UserServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j10-real-captcha-form_verification/src/main/java/com/util/DBConfig.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j10-real-captcha-form_verification/src/main/java/com/util/DBManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j11-ajax/src/main/java/com/servlet/LoginCheckServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j1_jdbc/src/main/java/com/jdbc/TestBatchOperation.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j1_jdbc/src/main/java/com/jdbc/TestCallableStatement.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j1_jdbc/src/main/java/com/jdbc/TestResultSet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j1_jdbc/src/main/java/com/jdbc/TestStatement.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j1_jdbc/src/main/java/com/jdbc/TestTransaction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j1_jdbc/批量更新.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j1_jdbc/调用存储过程与函数.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j2_xml/src/emps.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j3_html/web/css.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/j7-servlet-filter/src/main/java/com/servlet/MyServlet.java" charset="GBK" />
+  </component>
+</project>

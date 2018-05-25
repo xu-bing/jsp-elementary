@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="j9-mvc_dao:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/j9_mvc_dao_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="j9-mvc_dao/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="j9-mvc_dao" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

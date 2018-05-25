@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="j10_real:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/j10_real_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="j10-real-captcha-form_verification/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="j10-real-captcha-form_verification" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

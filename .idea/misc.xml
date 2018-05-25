@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/j1_jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/j10_real/pom.xml" />
+        <option value="$PROJECT_DIR$/J6-javabean/pom.xml" />
+        <option value="$PROJECT_DIR$/j7-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/j8-el/pom.xml" />
+        <option value="$PROJECT_DIR$/j9-mvc_dao/pom.xml" />
+        <option value="$PROJECT_DIR$/j11-ajax/pom.xml" />
+        <option value="$PROJECT_DIR$/j7_1-encoding/pom.xml" />
+        <option value="$PROJECT_DIR$/j7_2-servlet_hw/pom.xml" />
+        <option value="$PROJECT_DIR$/j10-real-captcha-form_verification/pom.xml" />
+        <option value="$PROJECT_DIR$/j8-el-jstl/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="jdk0866" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$/j1_jdbc">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="svn://localhost/j1_jdbc/branches" />
+                  <option value="svn://localhost/j1_jdbc/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="svn://localhost/j1_jdbc/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+</project>

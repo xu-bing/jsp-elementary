@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>hw_calculateTuition.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <b><br>计算费用</b><br>
+    学费：<input type="text" id="tuitionFee" onkeyup="dosum()">
+    书费：<input type="text" id="bookFee" onkeyup="dosum()">
+    住宿费：<input type="text" id="housingFee" onkeyup="dosum()">
+    合计：<input type="text" id="total" readonly="readonly"/>
+  </body>
+  
+  <script type="text/javascript">
+  
+  	function dosum(){
+	  	//obj, obj's value
+	  	var total = document.getElementById("total");
+	  	var sum = 0;
+	  	
+	  	// tuitionFee
+	  	var tuitionFee = document.getElementById("tuitionFee").value;
+	  	tuitionFee = parseInt(tuitionFee == "" ? 0 : tuitionFee);
+	  	
+	  	// bookFee
+	  	var bookFee = document.getElementById("bookFee").value;
+	  	bookFee = parseInt(bookFee == "" ? 0 : bookFee);
+	  	
+	  	// housingFee
+	  	var housingFee = document.getElementById("housingFee").value;
+	  	housingFee = parseInt(housingFee == "" ? 0 : housingFee);
+	  	 	
+	  	// dosum
+	  	sum = tuitionFee + bookFee + housingFee;
+	  	total.value = sum;
+	 }
+  </script>
+  
+</html>
+
+<!-- 
+	代码思路：
+	先
+ -->

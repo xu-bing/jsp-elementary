@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 内部dtd -->
+
+<!DOCTYPE root[ 
+	<!ELEMENT root (user+)>
+	<!ELEMENT user (name, age,test?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+	<!ATTLIST user birthdate CDATA '1991-1-1'>	
+]>
+
+
+
+<!-- 元素 -->
+<root>
+	<!-- 第1个用户 -->
+	
+	
+	<user birthdate="1992-1-1">
+		<name> tom</name>
+		<age>22</age>
+		<test><![CDATA[age<21]]></test>
+	</user>
+	
+	<!-- 第2个用户 -->
+	<user birthdate="1992-5-5">
+		<name>jack</name>
+		<age>55</age>
+		<test><![CDATA[age<21]]></test>
+	</user>
+
+</root>
+
+<!--
+////////////////////////////////////////////////////////////////////////////
+* dtd 
+** 构成
+<!DOCTYPE 根元素名 [  => 后不可加注释，否则，error: white space is required after 
+					the element type "root" in the element type declaration
+
+** 元素的次数
+
+** 元素的属性 
+!ATTLIST user birthdate CDATA 
+选项 
+'1900-1-1'	// 默认值 为1900-1-1
+#REQUIRED	// 强制的
+#FIXED '1900-1-1'	// 固定值 1900-1-1
+
+选项必须要写，否则：  white space is required before the attribute default 
+in the declaration of attribute "birthdate" for element user.
+
+
+** 元素的类型
+一切皆文本，如年龄20，它不是数值，只是文本。
+pcdata：parsed character data
+pdata: parsed data, 不可包含&,<,> &amp, &lt, &gt实体来代替。
+cdata: character data 不会被解析的字符数据，其中的标签不会被当作标签对待、其中的实体也不会被展开。
+
+** 编码风格
+不要以java中的来写。
+属性赋值符号（=） :前后不要有空格。
+！（允许有空格，但不建议）DOCTYPE : 
+
+/////////////////////////////////////////////////////////////////////////////
+
+** ！测试：
+＋ 属性：sex
+- 属性：age
+
+** 要求
+<self> 通过它理解dtd的定义。
+<stu> 只要求看懂即可。
+
+////////////////////////////////////////////////////////////////////////////
+* errors
+the content of element type "root" must match "(user)+"
+说明：root元素类型下没有与之匹配的user内容。
+match: 意思是匹配、对应
+why: 拼写错误。 
+
+/////////////////////////////////////////////////////////////////////////////
+<!(空格没关
+系)DOCTYPE>
+
+习惯：文档声明部分： encoding等号的前后不要有空格。
+
+xml文档声明部分前不要有注释，否则，dtd格式会不能立即起作用。
+ -->

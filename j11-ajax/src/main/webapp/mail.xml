@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mail-box>
+	<mail>
+		<to>小龙</to>
+		<from>小王</from>
+		<title>你好</title>
+		<content>在家吗，出来吃顿饭</content>
+	</mail>
+	<mail>
+		<to>小张</to>
+		<from>小白</from>
+		<title>大家好</title>
+		<content>大家好，我是新来的小白</content>
+	</mail>
+</mail-box>
+
+

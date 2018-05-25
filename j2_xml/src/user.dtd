@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DTD 元素-->
+<!ELEMENT root (user+)>
+<!ELEMENT user (name, age,test?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ATTLIST user birthdate CDATA #REQUIRED>	

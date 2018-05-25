@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bode</groupId>
+    <artifactId>j7_2-servlet_hw</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <jettyVersion>9.0.0.v20130308</jettyVersion>
+        <servletVersion>3.1.0</servletVersion>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servletVersion}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--配置jetty-->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jettyVersion}</version>
+
+                <configuration>
+                    <scanIntervalSeconds>2</scanIntervalSeconds>
+
+                    <httpConnector>8081</httpConnector>
+                    <webApp>
+                        <!--<contextPath>/J10</contextPath>-->
+                    </webApp>
+
+                </configuration>
+            </plugin>
+
+
+
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>for.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript">
+	/*
+		var sum = 0;
+		
+		for(i = 0; i <= 100; i++){
+			sum += i;
+		}
+		alert(sum);
+	*/	
+		// array
+		// 1st: new Array
+		var arr = new Array();			// 注意：大小写，JS中内置对象都是大写开头。
+																// 如果小写，error: array is not defined. 
+																//Why? 变量调用，要先声明后调用。
+		var arr1 = new Array(5);
+		var arr2 = new Array("tom", "jerry", "jack");
+		
+		// 2st
+		var arr3 = ["tom1", "jerry1", "jack1"];
+		
+		// -------------------------
+		// attr
+		alert(arr3.length);
+		
+		// set
+		arr3[4] = "Smith";
+		alert(arr3.length);
+		alert(arr3[3]);		// => undefined
+		
+		// get
+		alert(arr.length);	// => 0
+		alert(arr[2]);		// => undefined
+		
+		// traverse
+		for (var i = 0; i < arr3.length; i++){
+			alert(arr3[i]);
+		}
+				
+	</script>
+
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+  </body>
+</html>

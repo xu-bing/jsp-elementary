@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>side bar</title>
+</head>
+<body>
+  go to <a href="big_frame.html" target="_top"><b>big frame</b></a>
+  
+  <input type="button" id="goto" name="goto" value="big frame" onclick="goto()"/>
+  
+  <script type="text/javascript">
+  	function goto(){
+  		window.parent.frames.location.href = "big_frame.html";
+  		//window.parent.frames.location.href="big_frame.html"  	
+  	}	// goto
+  
+  </script>
+  
+</body>
+</html>

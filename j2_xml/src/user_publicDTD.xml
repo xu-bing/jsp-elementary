@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- doctype declaration -->
+<!DOCTYPE root PUBLIC "-//user.dtd" "">
+
+<!-- 元素 -->
+<root>
+	<!-- 第1个用户 -->
+	<user birthdate="1991-1-1">
+		<name>tom</name>
+		<age>22</age>
+	</user>
+	
+	<!-- 第2个用户 -->
+	<user birthdate="1990-1-1">
+		<name>jack</name>
+		<age>55</age>
+	</user>
+
+</root>
+
+<!--
+** 引入错误：
+引入的文件不存在
+ERROR: the markup declaration contained or pointed to by the document type declaration must be well-formed.
+解释：
+the markup declaration				: "-//usr" "alternative web address"
+the document type declaration 		: DOCTYPE
+
+解决：
+1. 在myelcipse中加载
+2. 文件关闭后再打开。
+
+ 引入的文件名与
+
+** 引入的好处：
+代码提示。
+提示what: 父元素下有哪些元素，元素有哪些属性。
+how: alt /
+
+** PUBLIC dtd的声明格式
+PUBLIC "key" "alternative web address"
+1. PUBLIC "-//usr" ""
+2. PUBLIC "-//user" "http://"
+
+
+
+
+-->

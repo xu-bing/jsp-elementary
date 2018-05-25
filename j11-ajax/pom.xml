@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.boode</groupId>
+    <artifactId>j11-ajax</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <jettyVersion>9.0.0.v20130308</jettyVersion>
+        <servletVersion>3.1.0</servletVersion>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servletVersion}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jettyVersion}</version>
+
+                <configuration>
+                    <scanIntervalSeconds>2</scanIntervalSeconds>
+
+                    <httpConnector>
+                        <port>8082</port>
+                    </httpConnector>
+
+                    <!--<webApp>
+                        &lt;!&ndash;<contextPath>/J10_1</contextPath>&ndash;&gt;
+                    </webApp>-->
+                </configuration>
+
+            </plugin>
+        </plugins>
+
+    </build>
+    
+</project>

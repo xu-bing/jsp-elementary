@@ -1,0 +1,101 @@
+<html>
+
+<head>
+	<title>我的第一个网页</title>
+	<!-- 配置网页元数据 -->
+	<meta http-equiv="keywords" content="java,南通,培训">
+	<meta http-equiv="description" content="南通boode java 培训">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	
+	<!-- 引入外部css文件 -->
+	<link rel="stylesheet" type="text/css" href="mycss.css">
+	
+	<!-- script脚本标签 -->
+	<script type="text/javascript">
+		// 写js脚本
+	</script>
+	
+	<!-- 引入外部js文件 -->
+	<script type="text/javascript" src="myjs.js"></script>
+		
+</head>
+<body>
+	<!-- /////////////////////////////////////////////// -->
+	<!-- 常用字体效果 -->
+	<h1>h1</h1>
+	<h2>h2</h2>
+	<h3>h3</h3>
+	<h6>h6</h6>
+	<b>bold 粗体</b> <br>
+	<strong>strong粗体</strong>
+	<u>下划线</u>
+	<strike>中划线</strike>
+	<del>删除线</del>
+	<strong><i>强调斜体</i></strong> <br>
+	
+	<!-- 如何引出style -->
+	<font color="blue" style="font-family:宋体;font-size:60px;color:red"> 字体</font>
+	   
+	<!-- ///////////////////////////////////////////// -->
+	<!-- 表格 -->
+	<table width="200px"  border="1px" bordercolor="green" align="center" bgColor="#ff7800" 
+	style="text-align:center; background-color:yellow">
+		<thead>
+			<th>学号</th>
+			<th>姓名</th>
+			<th>年龄</th>
+		</thead>
+		
+		<tbody>		
+			<tr align="right" bgColor="green">	<!-- 2nd row -->
+				<td>1001</td>
+				<td>张三</td>
+				<td>20</td>
+			</tr>
+			
+			<tr>	<!-- 3rd row -->
+				<td>1002</td>
+				<td>李四</td>
+				<td>21</td>
+			</tr>
+			
+			<tr>	<!-- 4th row -->
+				<td>1003</td>
+				<td>王五</td>
+				<td>22</td>
+			</tr>
+		</tbody>
+		
+	</table>
+	
+	<!-- ////////////////////////////////////////////////////////////////////////////// -->
+	<!-- 单元格合并 -->
+	<table width="200px"  border="1px" border-color="green" bgColor="#ff7800" 
+	style="text-align:center; background-color:yellow">
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		<tr>
+			
+			<tr align="right" bgColor="green">	<!-- 2nd row -->
+				<td colspan="2">1001</td>
+				<td>20</td>
+			</tr>
+			
+			<tr>	<!-- 3rd row -->
+				<td>1002</td>
+				<td rowspan="2">李四</td>
+				<td>21</td>
+			</tr>
+			
+			<tr>	<!-- 4th row -->
+				<td>1003</td>
+				<td>22</td>
+			</tr>
+		
+	</table>
+	
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DDT -->
+<!-- DOCTYPE 作用：声明DDT。
+如果有外部，则直接引进；如无，则可自定义。
+ -->
+<!DOCTYPE root SYSTEM "user.dtd">
+
+<!-- 元素 -->
+<root>
+	<!-- 第1个用户 -->
+	<user birthdate="1990-1-1">
+		<name>tom</name>
+		<age>22</age>
+	
+	</user>
+	
+	<!-- 第2个用户 -->
+	<user birthdate="1990-1-1">
+		<name>jack</name>
+		<age>55</age>
+	</user>
+
+</root>
+
+<!-- 演示：它是否起作用。 -->
+

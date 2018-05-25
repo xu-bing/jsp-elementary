@@ -1,0 +1,39 @@
+思路：
+正常更新 ---> 批量更新
+--------------------------------------------- st
+for(int i = 0; i < 3000; i++){
+				String createEmpSQL = 
+					"INSERT INTO emp (empno, ename)" +
+					" VALUES (" + i + ", 'TOM')";
+				
+				result += st.executeUpdate(createEmpSQL);		
+			}
+		
+----------------------------------------------- ps
+for (int i = 0; i < 3000; i++){
+				ps.setInt(1, i);
+				ps.setString(2, "TOM");
+				
+				
+				result += ps.executeUpdate();
+			}
+	
+	
+--------------------------------------------- st addbatch	
+			for(int i = 0; i < 3000; i++){
+				st.addBatch("INSERT INTO emp(empno, ename) VALUES (" + i + ", 'TOM')");		
+			}
+						
+			int[] aCount = st.executeBatch();
+			
+---------------------------------------------- ps addbatch			
+for (int i = 0; i < 3000; i++){
+				ps.setInt(1, i);
+				ps.setString(2, "TOM");
+				ps.addBatch();  // 将一组参数添加到ps对象的批处理命令中。
+			}
+			
+			int[] aCount= ps.executeBatch();		
+		
+			
+		

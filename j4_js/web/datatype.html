@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>datatype.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	
+	<script type="text/javascript">
+	
+		// undefined
+		var u;		// 变量未初始化时，其类型为undefined.
+		alert(u);
+		alert(typeof u);
+	
+		// string
+		var str = "hello world";	// 可以用单引号或双引号
+		str = 'hello world';
+		alert(str);
+		alert(typeof str);
+		
+		// number
+		var i = 20.5;
+		alert(i);
+		alert(typeof i);
+		
+		
+		// boolean
+		var b = true;
+		alert(b);
+		alert(typeof b);
+		
+		// object
+		// 1st 
+		var obj = new Object();
+		// attr
+		obj.name = "张三";		//属性赋值
+		obj.age = 20;
+		alert(typeof obj);	
+		alert(typeof obj.name);	
+		alert(obj.name);		//属性取值
+		// method
+		obj.eat = function(){			// 方法定义
+			alert("a man hafto eat");
+		}
+		alert(typeof obj.eat);
+		obj.eat();						// 方法调用 
+		
+		// 2nd
+		var obj2 = {
+					"name":"李四",
+					age:20,
+					sleep:function(){
+						alert("a man hafto sleep");
+					}
+		};
+		console.log(obj2.name);
+		obj2.sleep();
+		
+		// function
+		function f(i, j){
+			alert("函数1，无返回值");
+		};
+		
+		function f1(i, j){
+			return i + j;
+		}
+		
+		alert(typeof f1);
+		f();
+		console.log(f1(3,4));
+		
+		alert(5.0/0);	// => infinity
+		
+	</script>
+
+  </head>
+  
+  <body>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>onchange.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+   <!--  <select id="provinceSel" onchange="displayProvince()" onclick="displayProvinces()"> -->
+  	<select id="provinceSel" onchange="displayProvince()" onclick="alert(this.value)">
+  		<option value="js" selelected="selected">江苏</option>
+  		<option value="zj">浙江</option>
+  		<option value="ah">安徽</option>
+  	</select>
+  	
+  	<select id="citySel" onchange="displayCities()">
+  		<option value="nj">南京</option>
+  		<option value="nt">南通</option>
+  		<option value="xz">徐州</option>
+  	</select>
+  	
+  </body>
+ 
+  
+  <script language="javascript">
+  	// obj
+  	var provinceSel = document.getElementById("provinceSel");
+  	
+  	function displayProvince(){
+  		alert(provinceSel.value);
+  	}
+  	
+  	function displayProvinces(){
+  		alert(provinceSel.innerHTML);
+  	}
+  </script>
+  
+</html>
+
+<!-- 
+
+
+ -->

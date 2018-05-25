@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/J6-javabean/J6-javabean.iml" filepath="$PROJECT_DIR$/J6-javabean/J6-javabean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j10-real-captcha-form_verification/j10-real.iml" filepath="$PROJECT_DIR$/j10-real-captcha-form_verification/j10-real.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j11-ajax/j11-ajax.iml" filepath="$PROJECT_DIR$/j11-ajax/j11-ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j1_jdbc/j1_jdbc.iml" filepath="$PROJECT_DIR$/j1_jdbc/j1_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j2_xml/j2_xml.iml" filepath="$PROJECT_DIR$/j2_xml/j2_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j3_html/j3_html.iml" filepath="$PROJECT_DIR$/j3_html/j3_html.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j4_js/j4_js.iml" filepath="$PROJECT_DIR$/j4_js/j4_js.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j5_jsp/j5_jsp.iml" filepath="$PROJECT_DIR$/j5_jsp/j5_jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j7_1-encoding/j7_1-encoding.iml" filepath="$PROJECT_DIR$/j7_1-encoding/j7_1-encoding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j7_2-servlet_hw/j7_2-servlet_hw.iml" filepath="$PROJECT_DIR$/j7_2-servlet_hw/j7_2-servlet_hw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j8-el-jstl/j8-el-jstl.iml" filepath="$PROJECT_DIR$/j8-el-jstl/j8-el-jstl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j9-mvc_dao/j9-mvc_dao.iml" filepath="$PROJECT_DIR$/j9-mvc_dao/j9-mvc_dao.iml" />
+    </modules>
+  </component>
+</project>

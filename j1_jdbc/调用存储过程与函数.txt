@@ -1,0 +1,61 @@
+import java.math.BigDecimal;
+import java.sql.*;
+
+import oracle.jdbc.driver.OracleTypes;
+
+----------------------------------------------------------------- 存储过程
+			// 1. 创建callableStatement对象
+			cs = conn.prepareCall("{call sp_query_dept(?,?)}");	// 通配符数量要与存储过程一致；存储过程的名字不区分大小写		
+			// 2. 给输入参数赋值
+			cs.setInt(1, 20);	// 30: salesman		
+			// 3. 给输出参数注册类型
+			cs.registerOutParameter(2, Types.VARCHAR);			
+			// 4. 执行存储过程
+			cs.execute();		
+			// 5. 输出结果
+			String dname = cs.getString(2);
+			System.out.println(dname);
+			
+------------------------------------------------------------------ 函数		
+			// 1. 创建callableStatement对象
+			cs = conn.prepareCall("{?=call fn_emp_sal_statistics(?,?,?)}");	// RET:部门人数，IN:部门号，OUT:薪水总和，平均薪水		
+			// 2. 给输入参数赋值
+			cs.setInt(2, 30);	// 20: research		
+			// 3. 给输出参数注册类型
+			cs.registerOutParameter(1, Types.NUMERIC);
+			
+			cs.registerOutParameter(3, Types.NUMERIC);
+			//cs.registerOutParameter(4, Types.DOUBLE);
+			 cs.registerOutParameter(4, Types.DECIMAL);							
+			// 4. 执行存储过程
+			cs.execute();		
+			// 5. 输出结果
+			int count = cs.getInt(1);
+			int sum = cs.getInt(3);
+			//double avg = cs.getDouble(4);
+			BigDecimal avg = new BigDecimal(cs.getDouble(4));
+				
+			System.out.println(count);
+			System.out.println(sum);
+			System.out.println(avg);
+------------------------------------------------------------------	包	
+			// 1. 创建callableStatement对象
+			cs = conn.prepareCall("{call pack_del_emp.sp_del_emp(?,?,?)}");	// 通配符数量要与存储过程一致；存储过程的名字不区分大小写		
+			// 2. 给输入参数赋值
+			cs.setInt(1, 8801);		
+			// 3. 给输出参数注册类型
+			cs.registerOutParameter(2, OracleTypes.CURSOR);	// 注册游标类型
+			cs.registerOutParameter(3, Types.NUMERIC);			
+			// 4. 执行存储过程
+			cs.execute();		
+			// 5. 输出结果
+			int result = cs.getInt(3);
+			System.out.println(result);		
+			// 取游标，游标中的结果保存在ResultSet中。
+			rs = (ResultSet)cs.getObject(2);
+			while(rs.next()){
+				int empno = rs.getInt("empno");
+				String ename = rs.getString("ename");
+				System.out.println(empno + ":" + ename);
+			}
+	

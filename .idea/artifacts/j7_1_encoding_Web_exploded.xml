@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="j7_1-encoding:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/j7_1_encoding_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="j7_1-encoding/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="j7_1-encoding" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

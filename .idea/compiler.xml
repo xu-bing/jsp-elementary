@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="j10-real" />
+        <module name="j10-real-captcha-form_verification" />
+        <module name="j10_real" />
+        <module name="j11-ajax" />
+        <module name="j1_jdbc" />
+        <module name="J6-javabean" />
+        <module name="j7-servlet" />
+        <module name="j7_1-encoding" />
+        <module name="j7_2-servlet_hw" />
+        <module name="j8-el" />
+        <module name="j9-mvc_dao" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="j10-real" target="1.5" />
+      <module name="j10-real-captcha-form_verification" target="1.5" />
+      <module name="j10_real" target="1.5" />
+      <module name="j11-ajax" target="1.5" />
+      <module name="j1_jdbc" target="1.5" />
+      <module name="J6-javabean" target="1.5" />
+      <module name="j7-servlet" target="1.5" />
+      <module name="j7_1-encoding" target="1.5" />
+      <module name="j7_2-servlet_hw" target="1.5" />
+      <module name="j8-el" target="1.5" />
+      <module name="j9-mvc_dao" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

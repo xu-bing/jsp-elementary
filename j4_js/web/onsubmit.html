@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>onsubmit.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+  	<b>表单提交事件</b><br>
+  	<form id="myform1" action="form_processing.html" method="get" onsubmit="return verify()">
+  		姓名：<input type="text" id="username" /><br>
+  		年龄：<input type="text" id="age" /><br>
+  		<!-- 控制按键 -->
+  		<input type="submit" value="sumbit"/>
+  	</form>	
+  	
+  	<hr>
+  	<form id="myform2" action="form_processing.html" method="get">
+  		姓名：<input type="text" id="username1" /><br>
+  		年龄：<input type="text" id="age1" /><br>
+  		<!-- 控制按键 -->
+  		<input type="button" value="button" onclick="verify2()"/><br>
+  		<a href="javascript:void(0)" onclick="verify2()">link</a>
+  	</form>
+  
+  </body>
+  
+  <script type="text/javascript">
+  	// obj 
+  	var username = document.getElementById("username").value;
+  	var age = document.getElementById("age").value;
+  
+  	function verify(){
+  		if(username == "" || username.length > 5){
+  			alert("username err: null or length must be lt 5");
+  			return false;	// return: 表示返回的结果，还表示函数不再往执行。
+  		} else if(age == "" || age > 100 || age < 1){
+  			alert("age err: null or must be in 1-100");
+  			return false;
+  		}
+  	}	// verify();
+  		
+  	// --------------------------------------------------------------
+  	// obj 
+  	var username1 = document.getElementById("username1");
+  	var age1 = document.getElementById("age1");
+  	function verify2(){
+  		if(username1.value == "" || username1.value.length > 5){
+  			alert("username err: null or length must be lt 5");
+  			return false;
+  		} else if(age1.value == "" || age1.value > 100 || age1.value < 1){
+  			alert("age err: null or must be in 1-100");
+  			return false;
+  		}
+  		
+  		myform2.submit();
+  		
+  	}	// verify2();
+  	
+  </script>
+</html>

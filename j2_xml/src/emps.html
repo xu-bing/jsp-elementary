@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+
+<body>
+  <!--使用emps.xml作为数据源文件-->
+  <XML id="emp" src="EMPS.XML" />
+  <table width="200px" border="1px" datasrc="#emp">
+    <tr>	<!-- tr表示一行 -->
+      <td><span datafld="empno"></span></td>	<!-- td 表示1列， -->
+      <td><span datafld="ename"></span></td>
+      <td><span datafld="job"></span></td>
+      <td><span datafld="sal"></span><br></td>
+    </tr>
+  </table>
+</body>
+
+</html>
+
+
+<!--
+   => 最新的firefox, ie不支持xml标签，所以运行不会有结果。
+   最大的问题：文件地址写在文件中，其它人也可以看到，不安全。
+   只为演示用: xml只用来存储数据，html可用来格式化展示数据
+   要求：只作了解，练习时将ppt中拷过去，看下就行。
+
+-->
