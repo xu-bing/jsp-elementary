@@ -23,7 +23,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    welcome <%=session.getAttribute("username") %> login.
-    <a href="logout.jsp">注销</a>
+  <%
+    	/*
+  	// 如果使用
+  	if (session.getAttribute("username") == null){
+  		request.getRequestDispatcher("login.jsp").forward(request, response);
+  	}
+  	*/
+  %>
+  
+	<b><%=session.getAttribute("username") %></b>, 欢迎你。<br>
+	<a href="servlet/LoginServlet?flag=logout">注销</a>
+
   </body>
 </html>

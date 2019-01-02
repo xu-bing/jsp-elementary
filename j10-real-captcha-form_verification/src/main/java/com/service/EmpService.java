@@ -64,10 +64,11 @@ public class EmpService {
 		//-------------------------------------------------------------
 		try {	
 			conn = DBManager.getConnection();
+
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, begin);
 			ps.setInt(2, end);
-			
+
 			rs = ps.executeQuery();
 			while(rs.next()){
 				Emp emp = new Emp(

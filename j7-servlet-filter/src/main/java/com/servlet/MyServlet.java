@@ -15,24 +15,35 @@ public class MyServlet extends HttpServlet{
 
 
 	/**
-	 * 用于servlet创建后的初始化
-	 * 它由服务器自动调
+	 * 用于servlet创建后的初始化 或者说 服务器装入Servlet时执行
+	 * 它由服务器自动调用
+	 * 仅执行1次
 	 */
+	// 方式1：
+	/*@Override
 	public void init(){
 
 		System.out.println("init....");
 
+	}*/
+
+	// 方式2：
+	public init(ServletConfig config) throws ServletException {
+		super.init(config); 	// 不可删除，否则不能获取application, 也不能取初始化参数。
 	}
+
 
 	/**
 	 * 接受客户端请求
 	 * 调用相应的doGet, doPost方法
 	 */
+	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException{
 		System.out.println("service....");
 		doGet(request, response);
 	}
 
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
 		System.out.println("doGet...");
 
@@ -90,6 +101,7 @@ public class MyServlet extends HttpServlet{
 
 	}
 
+	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response){
 		System.out.println("doPost...");
 
@@ -102,12 +114,14 @@ public class MyServlet extends HttpServlet{
 	}
 
 	/**
-	 * 用于servlet对象销毁时调用，或者说在容器移除servlet时执行
+	 * 用于servlet对象销毁时调用，或者说在容器移除servlet时执行，或者说服务器停止且卸装Servlet时执行
 	 * 做一些善后工作, 如清理任务、释放占用资源
 	 * 服务器自动调用
+	 * 仅执行
 	 *
 	 *
 	 */
+	@Override
 	public void destroy(){
 		System.out.println("destroy...");
 	}

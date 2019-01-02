@@ -11,6 +11,11 @@ import com.domain.Dept;
 import com.util.DBManager;
 
 public class DeptService {
+
+    /**
+     * 查询所有部门的信息，要求显示部门的编号、名称及部门下的所有员工
+     * @return
+     */
 	public List<Dept> queryAllDepts(){
 		List<Dept> deptList = new ArrayList<Dept>();
 		
@@ -39,7 +44,8 @@ public class DeptService {
 				int deptno = rs.getInt("deptno");
 				d.setDeptno(deptno);
 				
-				// 将部门加入到部门列表中
+				// 将部门加入到部门列表中(加入时要求不能重复)
+                //
 				if (!deptList.contains(d)){		// 如果列表中不没有该部门
 					
 					//d.setDeptno(deptno);

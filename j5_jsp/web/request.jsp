@@ -37,7 +37,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	 --%>
   	 
   	 <!-- 2. -->
-  	 <%-- 
+  	 <%--
+
   	 <jsp:forward page="request_scope.jsp"></jsp:forward>
   	 --%>
   	 <%-- 

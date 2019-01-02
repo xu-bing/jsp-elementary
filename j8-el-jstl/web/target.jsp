@@ -35,8 +35,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	${paramValues.hobby[1] }
     	<hr>
     	<!-- /////////////////////////////////// -->
-    	<!-- javabean
-    		 对象.属性名
+    	<!--
+    	        javabean 对象.属性名
     	 -->
     	${user }
     	${user.username }

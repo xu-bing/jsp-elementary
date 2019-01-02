@@ -14,13 +14,20 @@ public class EmpService implements EmpServiceIface{
 
 	// 使用接口的好处：
 	// 下次如果empDAO换了，那只要在构造函数中重新new1个另外的empDao就可以了。
-	// 新的empDao肯定是实现了empDAOIface的。  
+	// 新的empDao肯定是实现了empDAOIface的。
+
+	// 10: service  --- 10: new EmpDao1()
+	//  private EmpDao1 empDao
+	//  empDao = new EmpDao1();
+
 	private EmpDAOIface empDAO;
+
 	
 	public EmpService(){
 		
 		//empDAO = new EmpDAO();
 		empDAO = EmpDAOFactory.createEmpDAO();
+
 	}
 	
 	/**

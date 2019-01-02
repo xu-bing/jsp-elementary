@@ -23,11 +23,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-   <!-- URL -->
+   <!-- 1. URL -->
    <%-- 
   	<jsp:forward page="param_receiver.jsp?username=tom&pwd=123"></jsp:forward>
   --%>
-   <!-- param -->
+   <!-- 2. param -->
    <jsp:forward page="param_receiver.jsp">
    		<jsp:param name="username" value="tom2"/>
    		<jsp:param name="pwd" value="1234"/>

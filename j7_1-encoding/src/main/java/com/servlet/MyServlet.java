@@ -1,17 +1,16 @@
 package com.servlet;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URLEncoder;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class MyServlet extends HttpServlet {
 
 	/**
+public class MyServlet extends HttpServlet {
 	 * Constructor of the object.
 	 */
 	public MyServlet() {
@@ -69,6 +68,7 @@ public class MyServlet extends HttpServlet {
 		out.println("<hr>");
 		
 //		1. 接收
+
 		///////////////////////////////////////////////////////////////////////////////////////////
 		// 接收的输入, 内容乱码=========================================================================
 //		String name = request.getParameter("username") == null ? "" : request.getParameter("username").trim();

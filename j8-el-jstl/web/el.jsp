@@ -23,15 +23,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+    <%--el表达式取作用域中的值--%>
+
     <%
-    	pageContext.setAttribute("username", "tom");
+    	String str = "tom";
+
+		pageContext.setAttribute("username", "tom");
     	pageContext.setAttribute("age", 20);
     	request.setAttribute("age", 21);
     	session.setAttribute("age", 22);
     	application.setAttribute("age", 23);
-    	
+
+
     %>
-    
+	<%=str%>
+
+    ${str } <!-- 返回：空字符串，因为它取作用域中的值-->
+
     ${username } 
     ${username1 } 	<!-- 属性不存在，其值显示为空字符串 -->
     
@@ -52,35 +60,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </form>
     
     <!-- ////////////////////////////////////////////////////// -->
-    <!-- javabean -->
     <%
+		// javabean
     	User user = new User("tom", 20);
     	request.setAttribute("user", user);
     	
-    %>
-    
-    <!-- list -->
-    <%
+
+    	// list
     	List<String> nameList = new ArrayList<String>();
     	nameList.add("tom");
     	nameList.add("jack");
     	nameList.add("jerry");
     	
     	request.setAttribute("nameList", nameList);
-    %>
-    
-    <!-- map -->
-    <%
+
+    	// map
     	Map<String, Object> map = new HashMap<String, Object>();
     	map.put("username", "tom");
     	map.put("age", 20);
     	map.put("birthdate", new Date());
     
     	request.setAttribute("userMap", map);
-    %>
-    
-    <!-- //////////////////////////////////////////////////// -->
-    <%
+
+    	// 作业：复杂对象
     	User user1 = new User("tom", 20, new Account(1500));
     	Map map0 = new HashMap();
     	map0.put("height", 193);

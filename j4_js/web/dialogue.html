@@ -11,11 +11,13 @@
 	
 	<script type="text/javascript">
 		
-		// alert
+		// alert 警示框
+        // 形状：有1个确定按钮
 		window.alert("hello world");
 		
 		// confirm
-		// 点击"确定"，返回true
+        // 形状：确定，取消按钮
+		// 返回值：点击"确定"，返回true
 		if(confirm("是否确认删除?")){
 			// ... 做删除
 			alert("删除成功");
@@ -24,7 +26,7 @@
 		}
 		
 		// prompt 输入对话框
-		// 返回输入的内容
+		// 返回值：返回输入的内容
 		var name = prompt("你的姓名?","请输入你的姓名");
 		alert(name);
 		

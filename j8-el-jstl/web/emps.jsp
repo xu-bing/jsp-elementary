@@ -29,11 +29,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	
   <body>	
   		<%
-	  		EmpService empService = new EmpService();
-			List<Emp> empList = empService.queryAllEmps();	
-  			
+			EmpService empService = new EmpService();
+			List<Emp> empList = empService.queryAllEmps();
+
 			request.setAttribute("empList", empList);
-  		%>
+		%>
   		
   		<table border="1px">
   			<tr>
@@ -42,24 +42,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   				<td>职务</td>
   				<td>薪水</td>
   				<td>雇佣日期</td>
+
   			</tr>
-  			
-  			<%-- 
-  			<%
-  				for (Emp e : empList){
-  			%>	
-  			<tr>
-  				<td><%=e.getEmpno() %></td>
-  				<td><%=e.getEname() %></td>
-  				<td><%=e.getJob() %></td>
-  				<td><%=e.getSal() %></td>
-  			</tr>
-  				
-  			<% 		
-  				}
-  			%>
+
+  			<%--
+  			异常：
+  			items=“${empList }(空格)” 结果：Property 'XXX' not found on type java.lang.String
+  			items="empList" 结果：同上
   			--%>
-  			
   			<c:forEach items="${empList }" var="emp" >
   				<tr>
   				<td>${emp.empno }</td>

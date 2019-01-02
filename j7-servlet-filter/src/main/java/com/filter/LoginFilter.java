@@ -50,23 +50,23 @@ public class LoginFilter implements Filter {
 		 * 
 		 * */
 		
-//		HttpServletRequest httpRequest = (HttpServletRequest)request;
-//	//	HttpServletResponse httpResponse = (HttpServletResponse)response;
-//		
-//		HttpSession httpSession = httpRequest.getSession();
-//		// ---------------------------------------------------------------
-//	
-//		// 设置welcome.jsp的访问权限：如果已经已经登陆，则可访问该页面；否则，跳转到login.jsp。
-//		if(httpSession.getAttribute("username") != null){
-//		
-//			chain.doFilter(request, response);
-//		} else {
-//	//		httpResponse.sendR edirect("/login.jsp");
-//			request.getRequestDispatcher("/login.jsp").forward(httpRequest, response); // forward的参数：ServletRequest, ServletResponse	
-//		}	
-//		
-//		// 测试：
-//		// 再在web.xml中增加配置过滤welcome.jsp。
+		HttpServletRequest httpRequest = (HttpServletRequest)request;
+	//	HttpServletResponse httpResponse = (HttpServletResponse)response;
+
+		HttpSession httpSession = httpRequest.getSession();
+		// ---------------------------------------------------------------
+
+		// 设置welcome.jsp的访问权限：如果已经已经登陆，则可访问该页面；否则，跳转到login.jsp。
+		if(httpSession.getAttribute("username") != null){
+
+			chain.doFilter(request, response);
+		} else {
+	//		httpResponse.sendR edirect("/login.jsp");
+			request.getRequestDispatcher("/login.jsp").forward(httpRequest, response); // forward的参数：ServletRequest, ServletResponse
+		}
+
+		// 测试：
+		// 再在web.xml中增加配置过滤welcome.jsp。
 		
 	}
 	

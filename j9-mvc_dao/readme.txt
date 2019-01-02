@@ -4,3 +4,9 @@ MVC
 
 
 DAO
+
+index ---> empServlet ---> empService
+                              |
+                            empServiceImpl ---> empDao
+                                                   |
+                                                 empDaoImpl ---> db

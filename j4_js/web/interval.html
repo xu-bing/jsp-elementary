@@ -31,7 +31,8 @@
 		
 		var interval = null;
 		
-		//interval = setInterval("updateTime()", 1000); 
+		//interval = setInterval("updateTime()", 1000);
+
 	
 		function updateTime(){
 			var divone = document.getElementById("div1");	
@@ -40,15 +41,14 @@
 	
 			count--;
 			
-			if (count < 0){					// 结果为0
+			if (count < 0){					// 不能是 <= 0。否则，只倒计时到1。
 				clearInterval(interval);	//  变量必须先定义，后使用。 函数：定义与调用位置无关。
 			}
 					
 		}	// updateTime
+
 		
-		// alert("111");		
-		
-		//updateTime(); 
+		//updateTime();  // 调用函数，更改timeboard的内容。
 		// interval = setInterval("updateTime()", 1000);
 		
 		function start(){

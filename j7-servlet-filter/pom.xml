@@ -8,5 +8,62 @@
     <artifactId>j7-servlet</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <jettyVersion>9.0.0.v20130308</jettyVersion>
+        <servletVersion>3.1.0</servletVersion>
+    </properties>
+
+    <dependencies>
+        <!--与tomcat不同，tomcat安装时会有运行时需要的servlet-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jettyVersion}</version>
+
+                <configuration>
+                    <!--重新编译目标java文件，再访问页面
+                        如果<=0, 则表示不扫描
+                        如果项目reload，则此设置不起作用
+                    -->
+                    <scanIntervalSeconds>2</scanIntervalSeconds>
+
+
+                    <!--http的设置-->
+                    <!--ALTERNATIVE-->
+                    <!--此处设置的port优先级高于 runner处的设置
+                        vm options: -Djetty:port=8081
+
+                        或
+
+                        command line: jetty:run -Djetty:port= 8081
+
+                    -->
+                     <httpConnector>
+                         <port>8207</port>
+                     </httpConnector>
+
+                    <webApp>
+                        <!--设置虚拟访问目录
+                        如果不设，则路径为：http://localhost:8082/
+                        如果设了，则路径为：http://localhost:8082/test1/
+                        -->
+                        <!--<contextPath>/test1</contextPath>-->
+                    </webApp>
+
+                    <!--https的设置-->
+
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     
 </project>
