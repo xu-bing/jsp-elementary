@@ -22,9 +22,11 @@
   	
   	// 2. 验证
   	function verify(flag){
+  	    // !每1次事件，是对元素的内容及样式进行设置
   		if (flag == 0){
-  		
   			hint.style.display = "inline";
+            hint.innerHTML = "请输入11位电话号码";
+            hint.style.color = "red";
   		} else {
   			if((phone.value.trim()).length == 11){
   				hint.innerHTML = "√";

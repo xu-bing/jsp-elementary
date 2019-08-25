@@ -62,6 +62,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <!-- jsp标签 -->
   	<%
   		request.setCharacterEncoding("UTF-8");
+
+  		request.getParameterNames()
   	 %>
   
   <!-- /////////////////////////////////////////////////////////////////////// -->

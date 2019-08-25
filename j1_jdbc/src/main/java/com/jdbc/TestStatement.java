@@ -8,9 +8,6 @@ public class TestStatement {
 	 * 查询所有员工
 	 *
 	 */
-	/**
-	 * 
-	 */
 	public void queryEmps(){
 		Connection conn = null;
 		Statement st = null;
@@ -42,7 +39,8 @@ public class TestStatement {
 			  String ename = rs.getString("ename");		// 通过列名来取值
 			  
 			  // 打印输出
-			  System.out.println(empno + ":" + ename);			
+			  System.out.println(empno +
+					  ":" + ename);
 			}
 			
 					

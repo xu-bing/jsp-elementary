@@ -28,7 +28,7 @@ public class MyServlet extends HttpServlet{
 	}*/
 
 	// 方式2：
-	public init(ServletConfig config) throws ServletException {
+	public void init (ServletConfig config) throws ServletException {
 		super.init(config); 	// 不可删除，否则不能获取application, 也不能取初始化参数。
 	}
 

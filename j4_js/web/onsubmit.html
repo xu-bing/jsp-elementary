@@ -39,10 +39,10 @@
   
   	function verify(){
   		if(username == "" || username.length > 5){
-  			alert("username err: null or length must be lt 5");
+  			alert("姓名不能为空，必须在5个字符以内");
   			return false;	// return: 表示返回的结果，还表示函数不再往执行。
   		} else if(age == "" || age > 100 || age < 1){
-  			alert("age err: null or must be in 1-100");
+  			alert("年龄不能为空，且必须在1到100之间");
   			return false;
   		}
   	}	// verify();
@@ -53,7 +53,7 @@
   	var age1 = document.getElementById("age1");
   	function verify2(){
   		if(username1.value == "" || username1.value.length > 5){
-  			alert("username err: null or length must be lt 5");
+  			alert("姓名不能为空，必须在5个字符以内");
   			return false;
   		} else if(age1.value == "" || age1.value > 100 || age1.value < 1){
   			alert("age err: null or must be in 1-100");
@@ -63,6 +63,22 @@
   		myform2.submit();
   		
   	}	// verify2();
+
+
+	  function f(){
+
+  	    if (1 == 1){
+  	        alert(true);
+  	        return false;
+		}
+
+		alert("222222233");
+
+  	    if (2 == 2){
+  	        alert("");
+		}
+
+	  }
   	
   </script>
 </html>

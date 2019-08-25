@@ -24,7 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 		function verify(){
 			
-		//	boolean result = checkUsername();	// register.jsp:75 Uncaught SyntaxError: Unexpected identifier 
+		//	boolean result = checkUsername();	// register.jsp:75 Uncaught SyntaxError: Unexpected identifier : js是弱类型语言，不可声明boolean类型
+		//	var checkUsername = checkUsername(); //不可这么写，因为
 		var result = checkUsername();
 		var result1 = checkAge();
 			

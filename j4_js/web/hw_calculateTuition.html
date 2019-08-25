@@ -33,6 +33,9 @@
 	  	
 	  	// bookFee
 	  	var bookFee = document.getElementById("bookFee").value;
+	  	// obj       如果名称写错，则为null
+        // obj.value 如果前台不填，则为空字符串，不会为null
+	  	// bookFee = parseInt(bookFee);
 	  	bookFee = parseInt(bookFee == "" ? 0 : bookFee);
 	  	
 	  	// housingFee

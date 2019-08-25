@@ -60,6 +60,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
       <div>
      	<form action="servlet/EmpServlet" method="get">
+		<%--
+		  当前页是前台传给后台进行分页查询的参数依据。通过给处理请求的servlet加上请求参数进行传递（也就是url传参）。
+		  此处的当前页不是传参，而是后台数据回显，反馈给前台供用户查看的。
+		--%>
      	当前页${currentPage}/${pageCount }&nbsp;
      	总记录数${count }&nbsp;
      	

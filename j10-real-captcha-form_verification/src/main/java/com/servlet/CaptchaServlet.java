@@ -36,6 +36,7 @@ public class CaptchaServlet extends HttpServlet {
 		int width = 78;
 		int height = 20;
 		//创建图片对象
+
 		BufferedImage bim = new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);
 		//获取图片绘图对象
 		Graphics g = bim.getGraphics();

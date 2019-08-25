@@ -39,6 +39,7 @@ public class EmpServlet extends HttpServlet {
 		//(1)查询员工总数（总记录数）
 		//统计员工总数
 		int count  = empService.countEmps();
+
 		
 		//将员工总数保存到request作用域中，并在empList.jsp页面动态展示
 		request.setAttribute("count", count);

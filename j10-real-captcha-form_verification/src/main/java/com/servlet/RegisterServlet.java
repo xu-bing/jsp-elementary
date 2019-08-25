@@ -19,24 +19,29 @@ public class RegisterServlet extends HttpServlet {
 		super();
 	}
 
+	@Override
 	public void destroy() {
 		super.destroy(); // Just puts "destroy" string in log
 		// Put your code here
+
+
 	}
 
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		this.doPost(request, response);
 	}
 
+	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
-		// 获取输入参数 (不需要判断null或空值，在下面判断)
+		// 获取前台输入参数 (不需要预处理：null, 空值，类型转换)
 		String username = request.getParameter("username");
 		String age = request.getParameter("age");
 
@@ -61,10 +66,12 @@ public class RegisterServlet extends HttpServlet {
 		} else if(Integer.parseInt(age) > 100 || Integer.parseInt(age) < 1){
 			errorMsg.put("age", "年龄必须在1-100之间");
 		}
-		
+
+		//  传递结果
 	//	if(result){
 		if(errorMsg.isEmpty()){	// 如果errorMsg中没有错误提示信息，则结果为空。  
 			// 做保存
+			request.getRequestDispatcher("/welcome.jsp").forward(request, response);
 		} else {
 			request.setAttribute("errMsg", errorMsg);
 			request.getRequestDispatcher("/register.jsp").forward(request, response);
@@ -77,6 +84,7 @@ public class RegisterServlet extends HttpServlet {
 	 *
 	 * @throws ServletException if an error occurs
 	 */
+	@Override
 	public void init() throws ServletException {
 		// Put your code here
 	}

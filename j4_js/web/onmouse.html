@@ -13,8 +13,9 @@
   </head>
   
   <body>
-  	<div id="blackboard" style="width:200px; height:100px; border:1px solid red" 
-  						 onmouseover="change(0)" onmouseout="change(1)">
+  	<div id="blackboard"
+         style="width:200px; height:100px; border:1px solid red"
+         onmouseover="change(0)" onmouseout="change(1)">
   	一，二，三，四
   	</div>
   </body>
@@ -28,7 +29,9 @@
 		var blackboard = document.getElementById("blackboard");
 		
 		function change(flag){
+		    // 根据不同的标识位来区分不同的事件
 			if (flag == 0){
+			    // 改变对象的样式：object.style.样式属性（js中驼峰式写法）
 				blackboard.style.backgroundColor  = "#000000";	// 黑色
 				blackboard.style.color = "#ffffff";
 				alert(blackboard.style.color);	// => rgb(0,0,0)

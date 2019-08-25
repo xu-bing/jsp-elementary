@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
-上面为声明部分
+上面为声明部分, 声明部分必须在文件的第1行
 version: 只有1.0
 
 声明部分如有红色浪线，可能eclipse解析原因，关掉再打开，就可以了。
@@ -11,7 +11,7 @@ version: 只有1.0
 <!-- root是根结点，根结点只有1个 -->
 <root>
 	<!-- 第1个用户 -->
-	<usr>
+	<usr birthdate="1990-1-1">
 		<name>tom</name>
 		<age>22</age>
 		<test><![CDATA[age<21]]></test>

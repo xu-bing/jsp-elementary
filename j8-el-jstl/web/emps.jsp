@@ -33,6 +33,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			List<Emp> empList = empService.queryAllEmps();
 
 			request.setAttribute("empList", empList);
+
+
 		%>
   		
   		<table border="1px">
@@ -62,7 +64,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   				
   		</table>
   		
-  		
+
+
   	
   </body>
 </html>
